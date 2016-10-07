@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Untitled Document</title>
+        <title>Client Information</title>
     </head>
 
 <body>
@@ -15,9 +15,10 @@
     <h1>Details for client with ID <?=$cid?>:</h1>
     <ul>
         <?php
+    
         require_once 'dbcon.php';
         
-        $sql = 'SELECT Client_Came, Client_Contact_Number FROM Clients where ClientsID=?';
+        $sql = 'SELECT Client_Name, Client_Contact_Number FROM Clients where ClientsID=?';
 
         $stmt = $link->prepare($sql);
         $stmt->bind_param('i', $cid);
@@ -25,8 +26,10 @@
         $stmt->bind_result($clname, $clcontact);
 
         while($stmt->fetch()){
-	       echo '<li><a href="filmdetails.php">'.$clname.$clcontact.'</a></li>';
+	       echo '<li><a href="filmdetails.php">'.$clname.' '.$clcontact.'</a></li>';
+                
         }
+        
         ?>
     </ul>
 
