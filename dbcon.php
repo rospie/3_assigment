@@ -5,7 +5,6 @@ const DB_PASS = 'root';
 const DB_NAME = 'Project1DB';
 
 
-echo '123';
 
 $link = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 if ($link->connect_error) { 
