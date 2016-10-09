@@ -27,7 +27,7 @@
     ?>
 
     </ul>
-    <a href="edit_form.php?prid=<?=$prid?>">Edit Project</a>
+    
 
 </body>
 </html>

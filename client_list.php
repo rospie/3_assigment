@@ -22,6 +22,8 @@
         }
         ?>
     </ul>
+    <br>
+    <hr>
 
 <form method="post" action="add_client.php">
 	New Name: <input type="text" name="clname" placeholder="New Name"/>
@@ -32,11 +34,14 @@
     <input type="submit" name="action" value="Add to client" />
 </form>
 
+    <br>
+    <hr>
+
 <h2>DELETE CLIENT</h2>
  <form action="delete_client.php" method="post">
  <select name="cid">
 		<?php
-		$sql = 'Select Client_Name, `ClientsID` from Clients;';
+		$sql = 'SELECT Client_Name, `ClientsID` FROM Clients;';
    		$stmt = $link->prepare($sql);
     	$stmt->execute();
     	$stmt->bind_result($clname, $cid);

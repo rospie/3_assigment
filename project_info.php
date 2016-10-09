@@ -2,13 +2,13 @@
 <html>
     <head>
     <meta charset="UTF-8">
-        <title>CLient info</title>
+        <title>Project Details</title>
     </head>
 
 <body>
     <?php
     
-    $prid = filter_input(INPUT_GET, 'prid', FILTER_VALIDATE_INT) or die('missing parameter');
+    $prid = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT) or die('missing parameter');
    
     ?>
 
@@ -38,6 +38,8 @@
     ?>
 
     </ul>
+    
+    <a href="edit_form.php?prid=<?=$prid?>">Edit Project</a>
 
 </body>
 </html>

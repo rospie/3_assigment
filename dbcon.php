@@ -1,8 +1,8 @@
 <?php
-const DB_HOST = 'localhost';
-const DB_USER = 'root';
-const DB_PASS = 'root';
-const DB_NAME = 'Project1DB';
+const DB_HOST = 'emmede.com.mysql';
+const DB_USER = 'emmede_com';
+const DB_PASS = 'AZXtFgRR';
+const DB_NAME = 'emmede_com';
 
 
 

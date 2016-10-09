@@ -11,7 +11,7 @@
 
     require_once 'dbcon.php';
 
-    $sql = 'Delete from clients where `ClientsID`=?';
+    $sql = 'DELETE FROM clients WHERE `ClientsID`=?';
     $stmt = $link->prepare($sql);
     $stmt->bind_param('i', $cid);
     $stmt->execute();
